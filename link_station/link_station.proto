@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "./link_station";
+
+service LinkStationService {
+    rpc GetNearest(Point) returns (LinkStation) {} 
+}
+
+message Point {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message LinkStation {
+    int32 x = 1;
+    int32 y = 2;
+    int32 r = 3;
+    float p = 4;
+}
